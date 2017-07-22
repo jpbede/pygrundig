@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+.idea/
+test.py
+keyboard.py
+Keyboard.java
+bla.py
