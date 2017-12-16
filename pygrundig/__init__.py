@@ -1,1 +1,1 @@
-__author__ = 'jpbede'
+from .pygrundig import PyGrundig
