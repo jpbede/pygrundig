@@ -1,3 +1,6 @@
+## This library isn't maintained anymore!
+
+
 # pygrundig
 Python library for Grundig TV remote control
 
