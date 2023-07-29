@@ -66,7 +66,7 @@ class PyGrundig:
         response = self._send_get_request("/setchannel?no="+channelNumber+"&service="+serviceType.value)
         return response == 'CHANNEL SET TO'
 
-    def get_current_running_progam_list(self):
+    def get_current_running_program_list(self):
         result = self._send_get_request("/nowlist")
         if result:
             return json.loads(result)
@@ -76,7 +76,7 @@ class PyGrundig:
         channel = self.get_current_channel()
         if channel:
             channelNumber = channel["channelNumber"]
-            running_list = self.get_current_running_list()
+            running_list = self.get_current_running_program_list()
             if running_list:
                 running_list = running_list["eventList"]
                 for running in running_list:
@@ -86,7 +86,7 @@ class PyGrundig:
         return False
 
     def get_channel_list(self):
-        channeljson = self.get_current_running_list()
+        channeljson = self.get_current_running_program_list()
         if channeljson:
             channels = []
             events = channeljson["eventList"]
